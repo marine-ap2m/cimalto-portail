@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boîte à outils CIMALTO SO</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #eceae5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .portal {
+      background: #f5f3ef;
+      border-radius: 20px;
+      padding: 40px 36px 32px;
+      width: 100%;
+      max-width: 620px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+    }
+
+    .header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 32px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      width: 44px;
+      height: 44px;
+      background: #e8622a;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo svg { width: 22px; height: 22px; }
+
+    .title { font-size: 19px; font-weight: 500; color: #1a1a2e; letter-spacing: -0.3px; }
+    .subtitle { font-size: 12px; color: #999; margin-top: 3px; font-weight: 300; }
+    .header-right { font-size: 11px; color: #bbb; font-weight: 300; padding-top: 4px; }
+
+    .divider { height: 1px; background: #e8e4dc; margin-bottom: 24px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ede9e2;
+      border-radius: 14px;
+      padding: 20px 18px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+    }
+
+    .card:hover {
+      border-color: #e8622a;
+      box-shadow: 0 4px 20px rgba(232,98,42,0.12);
+      transform: translateY(-2px);
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .i1 { background: #fff0eb; }
+    .i2 { background: #fff0f0; }
+    .i3 { background: #eff4ff; }
+    .i4 { background: #f5f0ff; }
+    .i5 { background: #edfdf6; }
+    .i6 { background: #fffbeb; }
+
+    .icon svg { width: 18px; height: 18px; }
+
+    .card-text { display: flex; flex-direction: column; }
+    .card-name { font-size: 13px; font-weight: 600; color: #1a1a2e; }
+    .card-desc { font-size: 11px; color: #aaa; margin-top: 2px; font-weight: 300; }
+    .card-num { font-size: 10px; color: #ddd; margin-top: 4px; }
+
+    @media (max-width: 480px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .portal { padding: 28px 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="portal">
+    <div class="header">
+      <div class="header-left">
+        <div class="logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+          </svg>
+        </div>
+        <div>
+          <div class="title">Boîte à outils CIMALTO SO</div>
+          <div class="subtitle">Agence Sud-Ouest · Le Haillan</div>
+        </div>
+      </div>
+      <div class="header-right">AP2M Gestion · 2026</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="grid">
+      <a class="card" href="https://marine-ap2m.github.io/cimalto-renta" target="_blank">
+        <div class="icon i1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e8622a" stroke-width="1.8">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <div class="card-text">
+          <span class="card-name">Pilotage</span>
+          <span class="card-desc">Rentabilité chantiers</span>
+          <span class="card-num">N°1</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://marine-ap2m.github.io/cimalto-recouvrement" target="_blank">
+        <div class="icon i2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#e05252" stroke-width="1.8">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <div class="card-text">
+          <span class="card-name">Recouvrement</span>
+          <span class="card-desc">Suivi créances</span>
+          <span class="card-num">N°2</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://marine-ap2m.github.io/cimalto-ao" target="_blank">
+        <div class="icon i3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#4a7fdb" stroke-width="1.8">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+        </div>
+        <div class="card-text">
+          <span class="card-name">AO Tracker</span>
+          <span class="card-desc">Appels d'offres</span>
+          <span class="card-num">N°3</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://marine-ap2m.github.io/cimalto-reunions" target="_blank">
+        <div class="icon i4">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9b6dd6" stroke-width="1.8">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <div class="card-text">
+          <span class="card-name">Réunions</span>
+          <span class="card-desc">Comptes-rendus</span>
+          <span class="card-num">N°4</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://marine-ap2m.github.io/cimalto-soustraitance" target="_blank">
+        <div class="icon i5">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2faa72" stroke-width="1.8">
+            <rect x="2" y="7" width="20" height="14" rx="2"/>
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+          </svg>
+        </div>
+        <div class="card-text">
+          <span class="card-name">Sous-traitance</span>
+          <span class="card-desc">Gestion ST</span>
+          <span class="card-num">N°5</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://marine-ap2m.github.io/cimalto-rapports" target="_blank">
+        <div class="icon i6">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c9950a" stroke-width="1.8">
+            <path d="M9 11l3 3L22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+        </div>
+        <div class="card-text">
+          <span class="card-name">Rapports / Diagnostic</span>
+          <span class="card-desc">Missions intervention</span>
+          <span class="card-num">N°6</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
