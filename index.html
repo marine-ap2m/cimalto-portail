@@ -69,11 +69,14 @@
       background: white;
       border: 1px solid #ede9e2;
       border-radius: 14px;
-      padding: 20px 18px;
+      padding: 20px 12px;
       text-decoration: none;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 14px;
+      justify-content: center;
+      gap: 10px;
+      aspect-ratio: 1;
       transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
     }
 
@@ -99,33 +102,19 @@
     .i4 { background: #f5f0ff; }
     .i5 { background: #edfdf6; }
     .i6 { background: #fffbeb; }
-    .i7 { background: #e8f5ff; }
-    .i8 { background: #edfbf7; }
+    .i7 { background: #edfbf7; }
+    .i8 { background: #e8f5ff; }
 
     .icon svg { width: 18px; height: 18px; }
 
-    .card-text { display: flex; flex-direction: column; }
+    .card-text { display: flex; flex-direction: column; align-items: center; text-align: center; }
     .card-name { font-size: 13px; font-weight: 600; color: #1a1a2e; }
     .card-desc { font-size: 11px; color: #aaa; margin-top: 2px; font-weight: 300; }
     .card-num { font-size: 10px; color: #ddd; margin-top: 4px; }
 
-    .card-wide {
-      grid-column: 1 / -1;
-    }
-
-    .card-wide .card-cta {
-      margin-left: auto;
-      color: #d8d4cd;
-      flex-shrink: 0;
-      transition: color 0.2s;
-    }
-
-    .card-wide:hover .card-cta { color: #e8622a; }
-
     @media (max-width: 480px) {
       .grid { grid-template-columns: repeat(2, 1fr); }
       .portal { padding: 28px 20px 24px; }
-      .card-wide { grid-column: 1 / -1; }
     }
   </style>
 </head>
@@ -233,8 +222,22 @@
         </div>
       </a>
 
-      <a class="card card-wide" href="https://marine-ap2m.github.io/-cimalto-interim" target="_blank">
+      <a class="card" href="https://marine-ap2m.github.io/itm-suivichantier/" target="_blank">
         <div class="icon i7">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1aab78" stroke-width="1.8">
+            <path d="M3 3v18h18"/>
+            <polyline points="7 16 11 10 15 13 19 7"/>
+          </svg>
+        </div>
+        <div class="card-text">
+          <span class="card-name">Suivi ITM</span>
+          <span class="card-desc">Suivi chantier intérim</span>
+          <span class="card-num">N°7</span>
+        </div>
+      </a>
+
+      <a class="card" href="https://marine-ap2m.github.io/-cimalto-interim" target="_blank">
+        <div class="icon i8">
           <svg viewBox="0 0 24 24" fill="none" stroke="#2b8abf" stroke-width="1.8">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
             <circle cx="9" cy="7" r="4"/>
@@ -245,11 +248,8 @@
         <div class="card-text">
           <span class="card-name">Intérim</span>
           <span class="card-desc">Gestion personnel temporaire</span>
-          <span class="card-num">N°7</span>
+          <span class="card-num">N°8</span>
         </div>
-        <svg class="card-cta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
-          <polyline points="9 18 15 12 9 6"/>
-        </svg>
       </a>
 
       <a class="card card-wide" href="https://marine-ap2m.github.io/itm-suivichantier/" target="_blank">
