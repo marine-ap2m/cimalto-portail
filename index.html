@@ -112,6 +112,16 @@
     .card-desc { font-size: 11px; color: #aaa; margin-top: 2px; font-weight: 300; }
     .card-num { font-size: 10px; color: #ddd; margin-top: 4px; }
 
+    .card-double {
+      grid-column: span 2;
+      aspect-ratio: unset;
+      flex-direction: row;
+      gap: 14px;
+      padding: 20px 18px;
+    }
+
+    .card-double .card-text { align-items: flex-start; text-align: left; }
+
     @media (max-width: 480px) {
       .grid { grid-template-columns: repeat(2, 1fr); }
       .portal { padding: 28px 20px 24px; }
@@ -250,23 +260,6 @@
           <span class="card-desc">Gestion personnel temporaire</span>
           <span class="card-num">N°8</span>
         </div>
-      </a>
-
-      <a class="card card-wide" href="https://marine-ap2m.github.io/itm-suivichantier/" target="_blank">
-        <div class="icon i8">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1aab78" stroke-width="1.8">
-            <path d="M3 3v18h18"/>
-            <polyline points="7 16 11 10 15 13 19 7"/>
-          </svg>
-        </div>
-        <div class="card-text">
-          <span class="card-name">Suivi ITM</span>
-          <span class="card-desc">Suivi chantier intérim</span>
-          <span class="card-num">N°8</span>
-        </div>
-        <svg class="card-cta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16">
-          <polyline points="9 18 15 12 9 6"/>
-        </svg>
       </a>
     </div>
   </div>
